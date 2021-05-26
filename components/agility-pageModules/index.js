@@ -1,4 +1,5 @@
 import RichTextArea from "./RichTextArea";
+import Markdown from "./Markdown";
 import FeaturedPost from "./FeaturedPost";
 import PostsListing from "./PostsListing";
 import PostDetails from "./PostDetails";
@@ -15,6 +16,7 @@ const allModules = [
   { name: "PostsListing", module: PostsListing },
   { name: "PostDetails", module: PostDetails },
   { name: "RichTextArea", module: RichTextArea },
+  { name: "Markdown", module: Markdown }
 ];
 
 export const getModule = (moduleName) => {
