@@ -37,7 +37,6 @@ function Layout(props) {
   if (dynamicPageItem?.seo?.metaDescription) {
     page.seo.metaDescription = dynamicPageItem.seo.metaDescription;
   }
-
   return (
     <>
       <SEO

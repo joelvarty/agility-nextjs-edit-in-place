@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import truncate from "truncate-html";
 
-const FeaturedPost = ({ module }) => {
+const FeaturedPost = (props) => {
+
+
+	const { module } = props
   // get module fields
   const { fields } = module;
 
@@ -40,6 +43,7 @@ const FeaturedPost = ({ module }) => {
                   src={featuredPost.fields.image.url}
                   className="object-cover object-center rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
                   layout="fill"
+
                 />
               </div>
             </a>

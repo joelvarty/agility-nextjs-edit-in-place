@@ -52,20 +52,21 @@ const PreviewBar = ({ isPreview, isDevelopmentMode }) => {
         <div className="flex items-center">
           <span className="p-2 rounded-lg mr-4">
             <a
-              href="https://www.agilitycms.com"
-              target="_blank"
+              href="https://manager.agilitycms.com/instance/e0d77bbf-u"
+              target="agility"
               title="Agility CMS"
             >
               <img
                 src="https://static.agilitycms.com/brand/agility-triangle-yellow.svg"
-                alt="Agility CMS"
+                alt="Edit in Agility CMS"
                 className="w-5 h-5 block md:hidden"
               />
               <img
                 src="/assets/agility-preview-logo.svg"
-                alt="Agility CMS"
+                alt="Edit in Agility CMS"
                 className="h-5 w-20 hidden md:block"
               />
+
             </a>
           </span>
           <div className="mr-4">
