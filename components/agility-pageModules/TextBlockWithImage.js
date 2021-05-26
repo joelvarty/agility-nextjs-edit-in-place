@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const TextBlockWithImage = ({ module, isDevelopmentMode, isPreview, languageCode, page }) => {
-console.log(module)
 
 	const showEdit = isDevelopmentMode || isPreview
 
@@ -55,7 +54,7 @@ console.log(module)
 
 					<div className="md:w-6/12 flex-shrink-0 relative">
 						{fields.primaryButton ? (
-							<Link href={href} as={fields.primaryButton.href}>
+							<a href={fields.primaryButton.href}>
 								<Image
 									src={fields.image.url}
 									alt={fields.image.label}
@@ -63,7 +62,7 @@ console.log(module)
 									height="512"
 									className="rounded-lg object-cover object-center cursor-pointer"
 								/>
-							</Link>
+							</a>
 						) : (
 							<Image
 								src={fields.image.url}

@@ -4,6 +4,7 @@ import { getAgilityPageProps, getAgilityPaths } from "@agility/nextjs/node";
 import { getModule } from "components/agility-pageModules";
 import SiteHeader from "components/common/SiteHeader";
 
+
 // getStaticProps function fetches data for all of your Agility Pages and Next.js will pre-render these pages at build time
 export async function getStaticProps({
   preview,
@@ -13,8 +14,11 @@ export async function getStaticProps({
   locales,
 }) {
 
-	const testPath = path.join(process.cwd(),  ".next/cache/agility")
-	console.log("Cache Path: ", testPath, existsSync(testPath) ? "exists" : "doesn't exist")
+
+	const path = require("path")
+	const fs = require("fs")
+	 const testPath = path.join(process.cwd(),  ".next/cache/agility")
+	 console.log("Cache Path: ", testPath, fs.existsSync(testPath) ? "exists" : "doesn't exist")
 
 
   // place all global here
