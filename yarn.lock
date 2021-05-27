@@ -2,27 +2,27 @@
 # yarn lockfile v1
 
 
-"@agility/content-fetch@^1.0.0":
+"@agility/content-fetch@^1.0.0", "@agility/content-fetch@^1.1.1":
   version "1.1.1"
-  resolved "https://registry.npmjs.org/@agility/content-fetch/-/content-fetch-1.1.1.tgz"
+  resolved "https://registry.yarnpkg.com/@agility/content-fetch/-/content-fetch-1.1.1.tgz#d8a91ceea8e7809c84ee954cb08444071612b3e0"
   integrity sha512-d7IyZSYL16HGOMhnWs/W4rMqMBUSHfTelDdxrwuGuc3EXlth83VwPVsZZuIxQDI5EJzXOcsvMUT6B1ENDSrd5A==
   dependencies:
     axios "^0.21.1"
     axios-cache-adapter "^2.4.1"
 
-"@agility/content-sync@^0.1.24":
-  version "0.1.24"
-  resolved "https://registry.npmjs.org/@agility/content-sync/-/content-sync-0.1.24.tgz"
-  integrity sha512-crp1hXXr0n7D4adsjI1A86nrHmWigNyriWjhgCAlW5f270MObdhZa3gUUiplo2di4Tz68T94kvvNhHra+A9enw==
+"@agility/content-sync@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@agility/content-sync/-/content-sync-1.0.1.tgz#caf8d15403da7339c23b8884a27dfeec56acb627"
+  integrity sha512-hJl2MKL1cc22u+BITTsIs+TKYBGH6JiO1t5fBC1BGzckJjrPTM+1sBGftJUGcGiqO4lDcVzhBgwqjjQv+rQyUA==
   dependencies:
     "@agility/content-fetch" "^1.0.0"
     dotenv "^8.2.0"
-    proper-lockfile "^4.1.1"
+    proper-lockfile "^4.1.2"
 
-"@agility/nextjs@^0.2.0-rc9":
-  version "0.2.0-rc9"
-  resolved "https://registry.yarnpkg.com/@agility/nextjs/-/nextjs-0.2.0-rc9.tgz#2cdbe0560ef859ac24f844a494f3d02b66cfc99b"
-  integrity sha512-L8YEeWSCf8iUn3G5WnzQvmcZ1rVtt55hNJJeM9y3IKCYykbscl4sta/GNF1vLSKy6XozMKtTFljW3shdOTd0CA==
+"@agility/nextjs@^0.2.0-rc12":
+  version "0.2.0-rc12"
+  resolved "https://registry.yarnpkg.com/@agility/nextjs/-/nextjs-0.2.0-rc12.tgz#3ac665bf2e4d0c872e1477d1289b73055db4fde6"
+  integrity sha512-X4AbTxLUbX1frJqjPqQw3HosPYAif4zfHGz4tximX1j2NqW7k4LYxTtnq1l9u20AQrXUMD1CGrHhirW30urBrg==
 
 "@babel/code-frame@7.12.11":
   version "7.12.11"
@@ -2237,9 +2237,9 @@ prop-types@15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
-proper-lockfile@^4.1.1:
+proper-lockfile@^4.1.2:
   version "4.1.2"
-  resolved "https://registry.npmjs.org/proper-lockfile/-/proper-lockfile-4.1.2.tgz"
+  resolved "https://registry.yarnpkg.com/proper-lockfile/-/proper-lockfile-4.1.2.tgz#c8b9de2af6b2f1601067f98e01ac66baa223141f"
   integrity sha512-TjNPblN4BwAWMXU8s9AEz4JmQxnD1NNL7bNOY/AKUzyamc379FWASUhc/K1pL2noVb+XmZKLL68cjzLsiOAMaA==
   dependencies:
     graceful-fs "^4.2.4"

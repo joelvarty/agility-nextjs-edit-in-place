@@ -2,8 +2,12 @@ import React from "react";
 import { renderHTML } from "@agility/nextjs";
 import Image from "next/image";
 
-const PostDetails = ({ dynamicPageItem }) => {
-  // post fields
+const PostDetails = ({ dynamicPageItem, isDevelopmentMode, isPreview, languageCode, page  }) => {
+
+	const showEdit = isDevelopmentMode || isPreview
+	const editLink = `https://manager.agilitycms.com/instance/e0d77bbf-u/${languageCode}/content/list-6/listitem-${dynamicPageItem.contentID}`
+
+	// post fields
   const post = dynamicPageItem.fields;
 
   // category
@@ -13,7 +17,11 @@ const PostDetails = ({ dynamicPageItem }) => {
   const dateStr = new Date(post.date).toLocaleDateString();
 
   return (
-    <div className="relative px-8">
+	<div className={showEdit ? "group relative px-8 hover:bg-gray-100" : "relative px-8"}>
+		<a href={editLink} target="agility" className="absolute z-10 transition-opacity opacity-0 group-hover:opacity-100 top-0 left-5 shadow-md bg-gray-400 rounded rounded-t-none px-2 py-1 text-gray-800 flex items-center hover:text-primary-500">
+				<img src="/assets/edit-pencil.svg" className="h-4 w-4 mr-2"/>
+			 	Edit in Agility CMS
+			</a>
       <div className="max-w-screen-xl mx-auto">
         <div className="h-64 md:h-96 relative">
           <Image

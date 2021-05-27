@@ -14,13 +14,6 @@ export async function getStaticProps({
   locales,
 }) {
 
-
-	const path = require("path")
-	const fs = require("fs")
-	 const testPath = path.join(process.cwd(),  ".next/cache/agility")
-	 console.log("Cache Path: ", testPath, fs.existsSync(testPath) ? "exists" : "doesn't exist")
-
-
   // place all global here
   const globalComponents = {
     header: SiteHeader,

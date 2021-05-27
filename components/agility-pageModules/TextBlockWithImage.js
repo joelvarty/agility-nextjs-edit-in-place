@@ -21,7 +21,7 @@ const TextBlockWithImage = ({ module, isDevelopmentMode, isPreview, languageCode
 		// if relative link, use next/link
 		if (isUrlAbsolute(url) === false) {
 			return (
-				<Link href={href} as={url} title={text} target={target}>
+				<Link href={url} title={text} target={target}>
 					<a className="inline-block mt-8 md:mt-8 px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-500 hover:bg-primary-700 focus:outline-none focus:border-primary-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
 						{text}
 					</a>
