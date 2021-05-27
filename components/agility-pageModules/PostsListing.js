@@ -2,12 +2,17 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+
 const PostsListing = ({ module, customData }) => {
 	// get posts
 	const { posts } = customData;
 
 	// set up href for internal links
 	let href = "/pages/[...slug]";
+
+	const loader = ({ src, width, quality }) => {
+		return `${src}?width=${width}q=${quality || 75}`
+	}
 
 	// if there are no posts, display message on frontend
 	if (posts.length <= 0) {
@@ -33,14 +38,17 @@ const PostsListing = ({ module, customData }) => {
 						<Link href={post.url} key={index}>
 							<a>
 								<div className="flex-col group mb-8 md:mb-0">
-									<div className="relative h-64">
-										<Image
-											src={post.imageSrc}
-											alt={post.imageAlt}
-											className="object-cover object-center rounded-t-lg"
-											layout="fill"
-										/>
-									</div>
+									{post.imageSrc &&
+										<div className="relative h-64">
+											<Image
+												src={post.imageSrc}
+												alt={post.imageAlt}
+												className="object-cover object-center rounded-t-lg"
+												loader={loader}
+												layout="fill"
+											/>
+										</div>
+									}
 									<div className="bg-gray-100 p-8 border-2 border-t-0 rounded-b-lg">
 										<div className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose">
 											{post.category}
@@ -84,6 +92,8 @@ PostsListing.getCustomInitialProps = async ({
 	// set up api
 	const api = agility;
 
+
+
 	try {
 		// get sitemap...
 		let sitemap = {}
@@ -112,7 +122,8 @@ PostsListing.getCustomInitialProps = async ({
 		// resolve dynamic urls
 		const dynamicUrls = resolvePostUrls(sitemap, rawPosts.items);
 
-		const posts = rawPosts.items.map((post) => {
+		const posts = rawPosts.items
+			.map((post) => {
 			//category
 			const category = post.fields.category;
 
@@ -123,7 +134,7 @@ PostsListing.getCustomInitialProps = async ({
 			const url = dynamicUrls[post.contentID] || "#";
 
 			// post image src
-			let imageSrc = post.fields.image.url;
+			let imageSrc = post.fields.image?.url || null;
 
 			// post image alt
 			let imageAlt = post.fields.image?.label || null;
@@ -133,7 +144,7 @@ PostsListing.getCustomInitialProps = async ({
 				title: post.fields.title,
 				date,
 				url,
-				category: category?.fields.title || "Uncategorized",
+				category: category?.fields?.title || "Uncategorized",
 				imageSrc,
 				imageAlt,
 			};

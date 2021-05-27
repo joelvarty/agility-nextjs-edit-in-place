@@ -4,8 +4,10 @@ module.exports = {
 	images: {
 
 		domains: [
+			`cdn.agilitycms.com`,
 			`cdn.aglty.io`,
 			`cdn-dev.aglty.io`,
+			`3440d72f-cdn.agilitycms.cloud`,
 			`${process.env.AGILITY_GUID}-cdn.agilitycms.cloud`,
 		],
 	},
