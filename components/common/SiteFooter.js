@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaTwitter, FaInstagram, FaSlack, FaYoutube } from "react-icons/fa";
+import { AgilityImage } from "@agility/nextjs";
 
 /**
  * This footer is not part of the content in the CMS, feel free to remove this for production use.
@@ -49,7 +50,7 @@ const SiteFooter = () => {
             target="_blank"
             title="Agility CMS"
           >
-            <Image
+            <AgilityImage
               src="/assets/agility-logo.svg"
               alt="Agility CMS"
               width="90"

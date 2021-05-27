@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import truncate from "truncate-html";
+import { AgilityImage } from "@agility/nextjs";
 
 const FeaturedPost = ({ module, isDevelopmentMode, isPreview, languageCode, page }) => {
 	const showEdit = isDevelopmentMode || isPreview
@@ -42,7 +43,7 @@ const FeaturedPost = ({ module, isDevelopmentMode, isPreview, languageCode, page
 					<Link href={`/blog/${featuredPost.fields.slug}`}>
 						<a className="cursor-pointer">
 							<div className="h-64 sm:h-96 relative">
-								<Image
+								<AgilityImage
 									src={featuredPost.fields.image.url}
 									className="object-cover object-center rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
 									layout="fill"

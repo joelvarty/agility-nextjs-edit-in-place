@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { AgilityImage } from "@agility/nextjs";
 
 
 const PostsListing = ({ module, customData }) => {
@@ -40,7 +41,7 @@ const PostsListing = ({ module, customData }) => {
 								<div className="flex-col group mb-8 md:mb-0">
 									{post.imageSrc &&
 										<div className="relative h-64">
-											<Image
+											<AgilityImage
 												src={post.imageSrc}
 												alt={post.imageAlt}
 												className="object-cover object-center rounded-t-lg"

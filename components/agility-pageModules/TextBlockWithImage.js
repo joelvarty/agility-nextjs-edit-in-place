@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AgilityImage } from "@agility/nextjs";
 
 const TextBlockWithImage = ({ module, isDevelopmentMode, isPreview, languageCode, page }) => {
 
@@ -55,7 +56,7 @@ const TextBlockWithImage = ({ module, isDevelopmentMode, isPreview, languageCode
 					<div className="md:w-6/12 flex-shrink-0 relative">
 						{fields.primaryButton ? (
 							<a href={fields.primaryButton.href}>
-								<Image
+								<AgilityImage
 									src={fields.image.url}
 									alt={fields.image.label}
 									width="768"
@@ -64,7 +65,7 @@ const TextBlockWithImage = ({ module, isDevelopmentMode, isPreview, languageCode
 								/>
 							</a>
 						) : (
-							<Image
+							<AgilityImage
 								src={fields.image.url}
 								alt={fields.image.label}
 								width="768"
