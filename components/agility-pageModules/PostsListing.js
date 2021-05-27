@@ -103,7 +103,7 @@ PostsListing.getCustomInitialProps = async ({
 		let rawPosts = await api.getContentList({
 			referenceName: "posts",
 			languageCode,
-			take: 100,
+			take: 50,
 			skip: 0,
 			contentLinkDepth: 2,
 			depth: 2
