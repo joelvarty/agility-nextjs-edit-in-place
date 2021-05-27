@@ -86,10 +86,18 @@ PostsListing.getCustomInitialProps = async ({
 
 	try {
 		// get sitemap...
-		let sitemap = await api.getSitemap({
-			channelName: channelName,
-			languageCode,
-		});
+		let sitemap = {}
+		if (api.getSitemap) {
+			sitemap = await api.getSitemap({
+				channelName: channelName,
+				languageCode,
+			});
+		} else {
+			sitemap = await api.getSitemapFlat({
+				channelName: channelName,
+				languageCode,
+			});
+		}
 
 		// get posts...
 		let rawPosts = await api.getContentList({
